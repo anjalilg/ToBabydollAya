@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>For My Babydoll Aya</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			Hey Babydoll...<br />
+			Ive been in love with you since this moment you since this conversation<br />
+			I asked 'Do you think you’d be interested in being my girlfriend even with the long distance?'<br />
+			And you replied 'Yeah and I'm serious, ik long distance are a bit tough for our future but I'll try everything i can to meet you even after 2 years'<br />
+			Ive made a timer for you since that exact moment<br />
+			Ill never forget how I felt. How happy I was, how I felt like the happiest person on the planet that I got to be with the person who made me be my happiest, and whom I wanted to spend every of life's journey with<br />
+			I made this for us to remember that moment forever<br />
+			Because ou are my forever<br />
+			<br>
+			<br>
+			Click on the heart below<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					TOGETHER FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- ANJO</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2025, 1, 4);
+together.setHours(16);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
